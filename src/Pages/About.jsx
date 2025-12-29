@@ -1,6 +1,6 @@
 import React, { useEffect, memo, useMemo } from "react"
 import { FileText, Code, Award, Globe, ArrowUpRight, Sparkles, UserCheck } from "lucide-react"
-import { certificates } from "../data/index"
+import { certificates, projects } from "../data/index"
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 
@@ -125,7 +125,7 @@ const AboutPage = () => {
       (today < new Date(today.getFullYear(), startDate.getMonth(), startDate.getDate()) ? 1 : 0);
 
     return {
-      totalProjects: storedProjects.length,
+      totalProjects: projects.length,
       totalCertificates: certificates.length,
       YearExperience: 2
     };
